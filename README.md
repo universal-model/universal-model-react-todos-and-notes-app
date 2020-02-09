@@ -9,7 +9,7 @@ Todos and Notes app consist of following UI components:
    * Filter
    * TodoList
    * AddTodo
- * NotePane (right)
+ * NotesPane (right)
    * Fi
    * NoteList
    * AddNote
@@ -25,6 +25,7 @@ Todos and Notes app consist of following UI components:
       |  | - model
       |  | - view
       |- notespane
+      |  |- model
       |  |- notelist
       |  |  |- model
       |  |  |- view
@@ -33,6 +34,7 @@ Todos and Notes app consist of following UI components:
       |  |  |- view
       |  |- view
       |- todospane
+      |- |- model
       |  |- todolist
       |  |  |- model
       |  |  |- view
@@ -41,3 +43,43 @@ Todos and Notes app consist of following UI components:
       |  |  |- view
       |  |- view
       |- store
+
+### Store
+**src/store/store.ts**
+    
+       const initialState = {
+           headerState: createSubState(initialHeaderState),
+           ...initialNotesPaneState,
+           ...initialTodosPaneState
+       };
+       
+       export type State = typeof initialState;
+       
+       const selectors = combineSelectors<State, typeof todosPaneStateSelectors, typeof notesPaneStateSelectors>(
+           todosPaneStateSelectors,
+           notesPaneStateSelectors
+       );
+       
+       export default createStore<State, typeof selectors>(initialState, selectors);
+    
+### Sub-stores
+**src/notespane/model/store/notesPaneSubStore.ts**
+
+    export const initialNotesPaneState = {
+        notesFilterState: createSubState(initialFilterState),
+        noteListState: createSubState(initialNoteListState),
+        addNoteState: createSubState(initialAddNoteState)
+    };
+    
+    export const noteListStateSelectors = createNoteListStateSelectors<typeof initialNotesPaneState>();
+    
+**src/notespane/model/store/todosPaneSubStore.ts**
+
+    export const initialTodosPaneState = {
+        todoFilterState: createSubState(initialFilterState),
+        todoListState: createSubState(initialTodoListState),
+        addTodoState: createSubState(initialAddTodoState)
+    };
+    
+    export const todosPaneStateSelectors = createTodoListStateSelectors<typeof initialTodosPaneState>();
+
