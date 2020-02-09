@@ -22,8 +22,8 @@ Todos and Notes app consist of following UI components:
       |  |  |- model
       |  |  |- view
       |- header
-      |   | - model
-      |   | - view
+      |  | - model
+      |  | - view
       |- notespane
       |  |- notelist
       |  |  |- model
