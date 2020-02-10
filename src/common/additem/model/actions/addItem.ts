@@ -5,7 +5,7 @@ import {
 
 let id = 3;
 
-export default function addItem(addItemNamespace: AddItemStateNamespace, text: string): void {
-  getItemListStateForNamespace(addItemNamespace).items.push({ id, text, isDone: false });
+export default function addItem(addItemStateNamespace: AddItemStateNamespace, text: string): void {
+  getItemListStateForNamespace(addItemStateNamespace).items.push({ id, text });
   id++;
 }
