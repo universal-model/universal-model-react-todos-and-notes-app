@@ -1,11 +1,11 @@
-import {combineSelectors, createStore, createSubState} from 'universal-model-react';
-import {filterStateSelectors, initialFiltersState} from '@/common/filter/model/store/filterSubStore';
+import { combineSelectors, createStore, createSubState } from 'universal-model-react';
+import { filterStateSelectors, initialFiltersState } from '@/common/filter/model/store/filterSubStore';
 import initialHeaderState from '@/header/model/state/initialHeaderState';
 import initialNoteListState from '@/notespane/notelist/model/state/initialNoteListState';
-import {initialAddItemsState} from '@/common/additem/model/store/addItemSubStore';
+import { initialAddItemsState } from '@/common/additem/model/store/addItemSubStore';
 import createTodoListStateSelectors from '@/todospane/todolist/model/state/createTodoListStateSelectors';
 import createNoteListStateSelectors from '@/notespane/notelist/model/state/createNoteListStateSelectors';
-import initialTodoListState from "@/todospane/todolist/model/state/initialTodoListState";
+import initialTodoListState from '@/todospane/todolist/model/state/initialTodoListState';
 
 const initialState = {
   headerState: createSubState(initialHeaderState),
