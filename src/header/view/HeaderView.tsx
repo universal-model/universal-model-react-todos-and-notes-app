@@ -10,7 +10,7 @@ export default () => {
   return (
     <div>
       <h1>
-        {state.loggedInUserName || ''} {state.loggedInUserName ? '´s' : ''} Todos and Notes
+        {state.loggedInUserName} {state.loggedInUserName ? '´s' : ''} Todos and Notes
       </h1>
       {state.loggedInUserName === '' ? (
         <button onClick={() => loginUser('John')}>Login</button>
