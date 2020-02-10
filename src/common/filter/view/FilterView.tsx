@@ -17,7 +17,7 @@ export default ({ stateNamespace }: Props) => {
     <div>
       <input
         value={filterState.text}
-        placeholder="Filter todos..."
+        placeholder={`Filter ${stateNamespace}...`}
         onChange={({ target: { value } }) => changeFilterText(stateNamespace, value)}
       />
     </div>

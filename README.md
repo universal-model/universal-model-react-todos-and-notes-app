@@ -161,6 +161,7 @@ Todos and Notes app consist of following UI components:
       return (
         <div>
           <input
+            placeholder={`Enter ${stateNamespace} text...`}
             value={addItemState.inputText}
             onChange={({ target: { value } }) => changeAddItemInputText(stateNamespace, value)}
           />
@@ -250,7 +251,7 @@ Todos and Notes app consist of following UI components:
         <div>
           <input
             value={filterState.text}
-            placeholder="Filter todos..."
+            placeholder={`Filter ${stateNamespace}...`}
             onChange={({ target: { value } }) => changeFilterText(stateNamespace, value)}
           />
         </div>
@@ -317,6 +318,7 @@ Todos and Notes app consist of following UI components:
     
     export default () => (
       <div>
+        <h2>Notes</h2>
         <FilterView stateNamespace="notes" />
         <NoteListView />
         <AddItemView stateNamespace="notes" />
@@ -392,6 +394,7 @@ Todos and Notes app consist of following UI components:
     
     export default () => (
       <div>
+        <h2>Todos</h2>
         <FilterView stateNamespace="todos" />
         <TodoListView />
         <AddItemView stateNamespace="todos" />

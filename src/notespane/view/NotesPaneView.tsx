@@ -5,6 +5,7 @@ import AddItemView from '@/common/additem/view/AddItemView';
 
 export default () => (
   <div>
+    <h2>Notes</h2>
     <FilterView stateNamespace="notes" />
     <NoteListView />
     <AddItemView stateNamespace="notes" />

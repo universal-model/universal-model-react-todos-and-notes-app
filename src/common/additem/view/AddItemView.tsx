@@ -18,6 +18,7 @@ export default ({ stateNamespace }: Props) => {
   return (
     <div>
       <input
+        placeholder={`Enter ${stateNamespace} text...`}
         value={addItemState.inputText}
         onChange={({ target: { value } }) => changeAddItemInputText(stateNamespace, value)}
       />

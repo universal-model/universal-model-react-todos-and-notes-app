@@ -5,6 +5,7 @@ import AddItemView from '@/common/additem/view/AddItemView';
 
 export default () => (
   <div>
+    <h2>Todos</h2>
     <FilterView stateNamespace="todos" />
     <TodoListView />
     <AddItemView stateNamespace="todos" />

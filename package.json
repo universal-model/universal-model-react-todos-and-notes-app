@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "webpack-dev-server",
     "eslint": "eslint --ext .js,.vue src",
-    "build": "webpack"
+    "build": "webpack",
+    "check-types": "tsc --outDir ./lib/types"
   },
   "sideEffects": false,
   "dependencies": {
