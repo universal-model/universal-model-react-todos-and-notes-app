@@ -3,16 +3,16 @@ import store from '@/store/store';
 import loginUser from '@/header/model/actions/loginUser';
 import logoutUser from '@/header/model/actions/logoutUser';
 
-const HeaderView = () => {
-  const { headerState: $ } = store.getState();
-  store.useState([$]);
+export default () => {
+  const { headerState: state } = store.getState();
+  store.useState([state]);
 
   return (
     <div>
       <h1>
-        {$.loggedInUserName || ''} {$.loggedInUserName ? '´s' : ''} Todos and Notes
+        {state.loggedInUserName || ''} {state.loggedInUserName ? '´s' : ''} Todos and Notes
       </h1>
-      {$.loggedInUserName === '' ? (
+      {state.loggedInUserName === '' ? (
         <button onClick={() => loginUser('John')}>Login</button>
       ) : (
         <button onClick={() => logoutUser()}>Logout</button>
@@ -20,5 +20,3 @@ const HeaderView = () => {
     </div>
   );
 };
-
-export default HeaderView;

@@ -3,7 +3,7 @@ import store from '@/store/store';
 import { Note } from '@/notespane/notelist/model/state/initialNoteListState';
 import removeNote from '@/notespane/notelist/model/actions/removeNote';
 
-const NoteListView = () => {
+export default () => {
   const { shownNotes } = store.getSelectors();
   store.useSelectors([shownNotes]);
 
@@ -17,4 +17,3 @@ const NoteListView = () => {
   return <ul>{noteListItems}</ul>;
 };
 
-export default NoteListView;

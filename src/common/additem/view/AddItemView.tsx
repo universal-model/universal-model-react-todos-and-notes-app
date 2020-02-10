@@ -11,7 +11,7 @@ interface Props {
   stateNamespace: AddItemStateNamespace;
 }
 
-const AddItemView = ({ stateNamespace }: Props) => {
+export default ({ stateNamespace }: Props) => {
   const addItemState = getAddItemStateForNamespace(stateNamespace);
   store.useState([addItemState]);
 
@@ -27,5 +27,3 @@ const AddItemView = ({ stateNamespace }: Props) => {
     </div>
   );
 };
-
-export default AddItemView;

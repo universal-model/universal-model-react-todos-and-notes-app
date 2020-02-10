@@ -1,14 +1,12 @@
 import * as React from 'react';
 import FilterView from '@/common/filter/view/FilterView';
 import TodoListView from '@/todospane/todolist/view/TodoListView';
-import AddItemView from "@/common/additem/view/AddItemView";
+import AddItemView from '@/common/additem/view/AddItemView';
 
-const TodosPaneView = () => (
+export default () => (
   <div>
     <FilterView stateNamespace="todos" />
     <TodoListView />
-    <AddItemView stateNamespace="todos"/>
+    <AddItemView stateNamespace="todos" />
   </div>
 );
-
-export default TodosPaneView;

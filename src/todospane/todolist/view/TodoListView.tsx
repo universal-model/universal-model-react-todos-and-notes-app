@@ -4,7 +4,7 @@ import { Todo } from '@/todospane/todolist/model/state/initialTodoListState';
 import toggleIsDoneTodo from '@/todospane/todolist/model/actions/toggleIsDoneTodo';
 import removeTodo from '@/todospane/todolist/model/actions/removeTodo';
 
-const TodoListView = () => {
+export default () => {
   const { shownTodos } = store.getSelectors();
   store.useSelectors([shownTodos]);
 
@@ -23,5 +23,3 @@ const TodoListView = () => {
 
   return <ul>{todoListItems}</ul>;
 };
-
-export default TodoListView;
