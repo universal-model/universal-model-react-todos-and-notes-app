@@ -1,5 +1,8 @@
 # Universal Model React Todos and Notes App
 
+This sample App is built for React, but model parts apply to other UI frameworks Angular/Svelte/Vue also.
+If you want to adopt this example for Angular/Svelte/Vue, you need to change only the view parts.
+
 ## App
 ![alt text](https://github.com/universal-model/universal-model-react-todos-and-notes-app/raw/master/images/todos_and_notes_app_wireframe.png 'App')
 
