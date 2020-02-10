@@ -9,13 +9,13 @@ If you want to adopt this example for Angular/Svelte/Vue, you need to change onl
 Todos and Notes app consist of following UI components:
  * Header 
  * TodosPane 
-   * Filter (Todos)
+   * Filter
    * TodoList
-   * AddItem (Todos)
+   * AddItem
  * NotesPane 
-   * Filter (Notes)
+   * Filter 
    * NoteList
-   * AddItem (Notes)
+   * AddItem 
 
 ### App directory layout
 
