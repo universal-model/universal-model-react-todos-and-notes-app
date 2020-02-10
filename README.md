@@ -161,7 +161,7 @@ Todos and Notes app consist of following UI components:
       return (
         <div>
           <input
-            placeholder={`Enter ${stateNamespace} text...`}
+            placeholder={`Enter ${stateNamespace.slice(0, -1)} text...`}
             value={addItemState.inputText}
             onChange={({ target: { value } }) => changeAddItemInputText(stateNamespace, value)}
           />
